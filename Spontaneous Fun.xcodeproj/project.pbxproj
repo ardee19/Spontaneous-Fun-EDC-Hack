@@ -16,6 +16,7 @@
 		6C1AD6931D0BC18700CD820A /* Spontaneous_FunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6921D0BC18700CD820A /* Spontaneous_FunUITests.swift */; };
 		6C1AD6A11D0BDC5600CD820A /* ContestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */; };
 		6C1AD6A31D0BDDDF00CD820A /* Contest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A21D0BDDDF00CD820A /* Contest.swift */; };
+		6C1AD6A81D0CA07900CD820A /* ContestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A71D0CA07900CD820A /* ContestDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6C1AD6941D0BC18700CD820A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestCell.swift; sourceTree = "<group>"; };
 		6C1AD6A21D0BDDDF00CD820A /* Contest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contest.swift; sourceTree = "<group>"; };
+		6C1AD6A71D0CA07900CD820A /* ContestDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				6C1AD6721D0BC18600CD820A /* AppDelegate.swift */,
-				6C1AD6741D0BC18600CD820A /* ViewController.swift */,
+				6C1AD6A61D0CA04900CD820A /* ViewController */,
 				6C1AD6761D0BC18600CD820A /* Main.storyboard */,
 				6C1AD6791D0BC18600CD820A /* Assets.xcassets */,
 				6C1AD67B1D0BC18600CD820A /* LaunchScreen.storyboard */,
@@ -129,6 +131,15 @@
 				6C1AD6941D0BC18700CD820A /* Info.plist */,
 			);
 			path = "Spontaneous FunUITests";
+			sourceTree = "<group>";
+		};
+		6C1AD6A61D0CA04900CD820A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AD6741D0BC18600CD820A /* ViewController.swift */,
+				6C1AD6A71D0CA07900CD820A /* ContestDetailsViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +275,7 @@
 			files = (
 				6C1AD6A31D0BDDDF00CD820A /* Contest.swift in Sources */,
 				6C1AD6751D0BC18600CD820A /* ViewController.swift in Sources */,
+				6C1AD6A81D0CA07900CD820A /* ContestDetailsViewController.swift in Sources */,
 				6C1AD6731D0BC18600CD820A /* AppDelegate.swift in Sources */,
 				6C1AD6A11D0BDC5600CD820A /* ContestCell.swift in Sources */,
 			);

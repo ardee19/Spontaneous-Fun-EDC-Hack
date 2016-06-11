@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var tableViewContest: UITableView!
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
@@ -70,6 +70,10 @@ extension ViewController: UITableViewDataSource {
         cell.thumbnail.layer.masksToBounds = true
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("contestDetails", sender: nil)
     }
     
 }

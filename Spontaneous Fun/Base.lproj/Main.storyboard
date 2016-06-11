@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Spontaneous Fun-->
@@ -142,17 +143,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableViewContest" destination="BnW-YH-g9y" id="o03-44-jh5"/>
-                        <segue destination="h1D-aX-EO4" kind="show" id="w3n-q8-EUG"/>
+                        <segue destination="h1D-aX-EO4" kind="show" identifier="contestDetails" id="w3n-q8-EUG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1137" y="387"/>
         </scene>
-        <!--View Controller-->
+        <!--Contest Details View Controller-->
         <scene sceneID="81E-0F-CKp">
             <objects>
-                <viewController id="h1D-aX-EO4" sceneMemberID="viewController">
+                <viewController id="h1D-aX-EO4" customClass="ContestDetailsViewController" customModule="Spontaneous_Fun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WAh-Nc-w3Q"/>
                         <viewControllerLayoutGuide type="bottom" id="eyd-qb-aPm"/>
@@ -231,12 +232,49 @@
                                     <constraint firstItem="jZd-aY-8Ji" firstAttribute="baseline" secondItem="h5y-ZY-GvU" secondAttribute="baseline" id="unO-Uw-Nil"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuo-JK-Dve">
+                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VxJ-cp-BYj">
+                                        <rect key="frame" x="274" y="56" width="52" height="38"/>
+                                        <state key="normal" image="join"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VxJ-cp-BYj" firstAttribute="centerX" secondItem="wuo-JK-Dve" secondAttribute="centerX" id="Gsg-f1-daD"/>
+                                    <constraint firstItem="VxJ-cp-BYj" firstAttribute="centerY" secondItem="wuo-JK-Dve" secondAttribute="centerY" id="PFJ-jk-3Le"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWy-gx-5NL">
+                                <rect key="frame" x="0.0" y="132" width="600" height="336"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDance" translatesAutoresizingMaskIntoConstraints="NO" id="oef-Bs-OKK">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="336"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="oef-Bs-OKK" firstAttribute="centerY" secondItem="qWy-gx-5NL" secondAttribute="centerY" id="kJs-9G-NBE"/>
+                                    <constraint firstItem="oef-Bs-OKK" firstAttribute="height" secondItem="qWy-gx-5NL" secondAttribute="height" id="sL4-N8-lWm"/>
+                                    <constraint firstItem="oef-Bs-OKK" firstAttribute="width" secondItem="qWy-gx-5NL" secondAttribute="width" id="y4O-fH-0mx"/>
+                                    <constraint firstItem="oef-Bs-OKK" firstAttribute="centerX" secondItem="qWy-gx-5NL" secondAttribute="centerX" id="yl6-o6-cx3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wuo-JK-Dve" secondAttribute="trailing" constant="-20" id="4nU-AG-CpB"/>
+                            <constraint firstItem="qWy-gx-5NL" firstAttribute="top" secondItem="GCf-PW-Reo" secondAttribute="bottom" constant="8" id="BT6-I0-WUQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qWy-gx-5NL" secondAttribute="trailing" constant="-20" id="DeF-dl-T6Z"/>
+                            <constraint firstItem="wuo-JK-Dve" firstAttribute="leading" secondItem="NMX-YX-WlI" secondAttribute="leadingMargin" constant="-20" id="JTg-5r-iId"/>
+                            <constraint firstItem="wuo-JK-Dve" firstAttribute="height" secondItem="NMX-YX-WlI" secondAttribute="height" multiplier="1/4" id="LJa-BM-awK"/>
                             <constraint firstItem="GCf-PW-Reo" firstAttribute="leading" secondItem="NMX-YX-WlI" secondAttribute="leadingMargin" constant="-20" id="Tt3-Vo-M8z"/>
+                            <constraint firstItem="wuo-JK-Dve" firstAttribute="top" secondItem="qWy-gx-5NL" secondAttribute="bottom" constant="-18" id="YWK-YG-QB3"/>
+                            <constraint firstItem="eyd-qb-aPm" firstAttribute="top" secondItem="wuo-JK-Dve" secondAttribute="bottom" id="ZmO-oH-fZB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GCf-PW-Reo" secondAttribute="trailing" constant="-20" id="pWm-i4-Hjg"/>
                             <constraint firstItem="GCf-PW-Reo" firstAttribute="top" secondItem="WAh-Nc-w3Q" secondAttribute="bottom" id="rul-iM-cfv"/>
+                            <constraint firstItem="qWy-gx-5NL" firstAttribute="leading" secondItem="NMX-YX-WlI" secondAttribute="leadingMargin" constant="-20" id="tzg-tu-3JP"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -272,6 +310,8 @@
         <image name="add-icon" width="19" height="19"/>
         <image name="chainsmokers" width="156" height="156"/>
         <image name="contestants-icon-sm" width="10" height="9"/>
+        <image name="imageDance" width="640" height="640"/>
+        <image name="join" width="52" height="38"/>
         <image name="search" width="19" height="19"/>
     </resources>
 </document>

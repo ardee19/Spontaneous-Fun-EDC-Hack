@@ -34,9 +34,21 @@ class ViewController: UIViewController, UITableViewDelegate {
 
 extension ViewController: UITableViewDataSource {
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 3
+    }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Official Contest"
+        
+        if section == 0 {
+            return "Official Contest"
+        } else if section == 1 {
+            return "Live Contest"
+        } else {
+            return "Past Contest"
+        }
+        
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

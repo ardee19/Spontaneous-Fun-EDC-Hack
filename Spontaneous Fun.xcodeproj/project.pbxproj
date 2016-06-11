@@ -14,6 +14,8 @@
 		6C1AD67D1D0BC18600CD820A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C1AD67B1D0BC18600CD820A /* LaunchScreen.storyboard */; };
 		6C1AD6881D0BC18700CD820A /* Spontaneous_FunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6871D0BC18700CD820A /* Spontaneous_FunTests.swift */; };
 		6C1AD6931D0BC18700CD820A /* Spontaneous_FunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6921D0BC18700CD820A /* Spontaneous_FunUITests.swift */; };
+		6C1AD6A11D0BDC5600CD820A /* ContestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */; };
+		6C1AD6A31D0BDDDF00CD820A /* Contest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A21D0BDDDF00CD820A /* Contest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		6C1AD68E1D0BC18700CD820A /* Spontaneous FunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spontaneous FunUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C1AD6921D0BC18700CD820A /* Spontaneous_FunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spontaneous_FunUITests.swift; sourceTree = "<group>"; };
 		6C1AD6941D0BC18700CD820A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestCell.swift; sourceTree = "<group>"; };
+		6C1AD6A21D0BDDDF00CD820A /* Contest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				6C1AD6791D0BC18600CD820A /* Assets.xcassets */,
 				6C1AD67B1D0BC18600CD820A /* LaunchScreen.storyboard */,
 				6C1AD67E1D0BC18700CD820A /* Info.plist */,
+				6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */,
+				6C1AD6A21D0BDDDF00CD820A /* Contest.swift */,
 			);
 			path = "Spontaneous Fun";
 			sourceTree = "<group>";
@@ -256,8 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1AD6A31D0BDDDF00CD820A /* Contest.swift in Sources */,
 				6C1AD6751D0BC18600CD820A /* ViewController.swift in Sources */,
 				6C1AD6731D0BC18600CD820A /* AppDelegate.swift in Sources */,
+				6C1AD6A11D0BDC5600CD820A /* ContestCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

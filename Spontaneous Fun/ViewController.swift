@@ -65,6 +65,10 @@ extension ViewController: UITableViewDataSource {
         cell.votes.text = "\(contestData[indexPath.row].votes)"
         cell.countdown.text = contestData[indexPath.row].countdown
         
+        //Make the thumbnail round
+        cell.thumbnail.layer.cornerRadius = cell.thumbnail.frame.width / 2
+        cell.thumbnail.layer.masksToBounds = true
+        
         return cell
     }
     

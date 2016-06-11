@@ -12,7 +12,7 @@ import UIKit
 struct  Contest {
     let title: String?
     let artist: String?
-    var votes: Int?
+    var votes: Int!
     let thumbnail:UIImage?
     var countdown: String?
     

@@ -17,6 +17,7 @@
 		6C1AD6A11D0BDC5600CD820A /* ContestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */; };
 		6C1AD6A31D0BDDDF00CD820A /* Contest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A21D0BDDDF00CD820A /* Contest.swift */; };
 		6C1AD6A81D0CA07900CD820A /* ContestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A71D0CA07900CD820A /* ContestDetailsViewController.swift */; };
+		6C1AD6AA1D0CB17900CD820A /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A91D0CB17900CD820A /* JoinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestCell.swift; sourceTree = "<group>"; };
 		6C1AD6A21D0BDDDF00CD820A /* Contest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contest.swift; sourceTree = "<group>"; };
 		6C1AD6A71D0CA07900CD820A /* ContestDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestDetailsViewController.swift; sourceTree = "<group>"; };
+		6C1AD6A91D0CB17900CD820A /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			children = (
 				6C1AD6741D0BC18600CD820A /* ViewController.swift */,
 				6C1AD6A71D0CA07900CD820A /* ContestDetailsViewController.swift */,
+				6C1AD6A91D0CB17900CD820A /* JoinViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				6C1AD6751D0BC18600CD820A /* ViewController.swift in Sources */,
 				6C1AD6A81D0CA07900CD820A /* ContestDetailsViewController.swift in Sources */,
 				6C1AD6731D0BC18600CD820A /* AppDelegate.swift in Sources */,
+				6C1AD6AA1D0CB17900CD820A /* JoinViewController.swift in Sources */,
 				6C1AD6A11D0BDC5600CD820A /* ContestCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

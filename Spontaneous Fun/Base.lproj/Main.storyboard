@@ -150,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="1137" y="387"/>
         </scene>
-        <!--Contest Details View Controller-->
+        <!--Contest-->
         <scene sceneID="81E-0F-CKp">
             <objects>
                 <viewController id="h1D-aX-EO4" customClass="ContestDetailsViewController" customModule="Spontaneous_Fun" customModuleProvider="target" sceneMemberID="viewController">
@@ -263,6 +263,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.91372549020000005" green="0.023529411760000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="wuo-JK-Dve" secondAttribute="trailing" constant="-20" id="4nU-AG-CpB"/>
                             <constraint firstItem="qWy-gx-5NL" firstAttribute="top" secondItem="GCf-PW-Reo" secondAttribute="bottom" constant="8" id="BT6-I0-WUQ"/>
@@ -277,10 +278,53 @@
                             <constraint firstItem="qWy-gx-5NL" firstAttribute="leading" secondItem="NMX-YX-WlI" secondAttribute="leadingMargin" constant="-20" id="tzg-tu-3JP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Contest" id="IZy-av-ybJ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="2DR-Zd-i8z">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PnY-9d-cK2">
+                                <rect key="frame" x="552" y="11" width="28" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="notification"/>
+                                <connections>
+                                    <segue destination="Acb-Ab-9o1" kind="show" id="XVN-ji-0ai"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANf-ts-5Fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1883" y="387"/>
+        </scene>
+        <!--Notification-->
+        <scene sceneID="XD5-xZ-HUR">
+            <objects>
+                <viewController id="Acb-Ab-9o1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hac-Gh-yWG"/>
+                        <viewControllerLayoutGuide type="bottom" id="RGu-ap-K75"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gsA-26-h7C">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePrize" translatesAutoresizingMaskIntoConstraints="NO" id="xQ2-7n-N3D">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.91372549020000005" green="0.023529411760000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RGu-ap-K75" firstAttribute="top" secondItem="xQ2-7n-N3D" secondAttribute="bottom" id="Fg8-yt-ZRT"/>
+                            <constraint firstItem="xQ2-7n-N3D" firstAttribute="top" secondItem="hac-Gh-yWG" secondAttribute="bottom" id="Fxg-nm-dug"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xQ2-7n-N3D" secondAttribute="trailing" constant="-20" id="cZu-ch-GW4"/>
+                            <constraint firstItem="xQ2-7n-N3D" firstAttribute="leading" secondItem="gsA-26-h7C" secondAttribute="leadingMargin" constant="-20" id="fXH-oy-iHk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notification" id="PP8-ge-xnb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQh-hh-knf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2614" y="-79"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qnx-0Q-I3X">
@@ -291,6 +335,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.9137254901960784" green="0.023529411764705882" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.9137254901960784" green="0.023529411764705882" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
@@ -311,7 +356,9 @@
         <image name="chainsmokers" width="156" height="156"/>
         <image name="contestants-icon-sm" width="10" height="9"/>
         <image name="imageDance" width="640" height="640"/>
+        <image name="imagePrize" width="640" height="1009"/>
         <image name="join" width="52" height="38"/>
+        <image name="notification" width="28" height="22"/>
         <image name="search" width="19" height="19"/>
     </resources>
 </document>

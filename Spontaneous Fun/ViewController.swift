@@ -34,22 +34,50 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView {
+        let view: UIView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+        /* Create custom view to display section header... */
+        let label: UILabel = UILabel(frame: CGRectMake(10, 5, tableView.frame.size.width, 18))
+        label.font = UIFont(name: "AvenirNext-Heavy", size: 11)
+        label.textColor = UIColor(red: 233/255.0, green: 6/255.0, blue: 250/255.0, alpha: 1.0)
+
+//        label.font = UIFont.boldSystemFontOfSize(12)
+        
+        var string: String
+        
+        if section == 0 {
+            string = "OFFICIAL CONTEST"
+        } else if section == 1 {
+            string = "LIVE CONTEST"
+        } else {
+            string = "PAST CONTEST"
+        }
+        
+        /* Section header is in 0th index... */
+        label.text = string
+        print(string)
+        view.addSubview(label)
+        view.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        //your background color...
+        return view
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 3
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        
-        if section == 0 {
-            return "Official Contest"
-        } else if section == 1 {
-            return "Live Contest"
-        } else {
-            return "Past Contest"
-        }
-        
-        
-    }
+//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        
+//        if section == 0 {
+//            return "Official Contest"
+//        } else if section == 1 {
+//            return "Live Contest"
+//        } else {
+//            return "Past Contest"
+//        }
+//        
+//        
+//    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contestData.count

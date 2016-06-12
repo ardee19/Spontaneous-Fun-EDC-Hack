@@ -26,12 +26,19 @@ class ContestDetailsViewController: UIViewController {
         didSet {
             if let image = selectedContestant.imageSubmission {
                 imageDance.image = image
+                if selectedContestant.voted {
+                    voteButton.setImage(upVotedImage, forState: .Normal)
+                } else {
+                    voteButton.setImage(noVoteImage, forState: .Normal)
+                }
                 
             }
         }
     }
     
     var currentContestantIndex = 0
+    
+    @IBOutlet weak var voteButton: UIButton!
     
     func selectContestant(contestant:Contestant, index:Int) {
         self.selectedContestant = contestant

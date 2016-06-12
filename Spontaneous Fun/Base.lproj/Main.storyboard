@@ -323,6 +323,7 @@
                         <outlet property="imageDance" destination="oef-Bs-OKK" id="Egf-1z-uUy"/>
                         <outlet property="scrollview" destination="mDD-ki-Gny" id="qq7-gb-3Od"/>
                         <outlet property="thumbnail" destination="h5y-ZY-GvU" id="Qb4-V3-bSZ"/>
+                        <outlet property="voteButton" destination="EyA-Lo-eqm" id="IYF-JT-bph"/>
                         <outlet property="votes" destination="NkR-Ai-AE4" id="mFS-Mh-2rf"/>
                         <segue destination="FYj-Is-tMA" kind="show" identifier="joinContest" id="khf-TT-XzP"/>
                     </connections>

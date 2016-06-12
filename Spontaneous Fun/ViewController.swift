@@ -99,6 +99,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("contestcell", forIndexPath: indexPath) as! ContestCell
         
+        
         cell.title.text = contestData[indexPath.row].title
         cell.artist.text = contestData[indexPath.row].artist
         cell.thumbnail.image = contestData[indexPath.row].thumbnail

@@ -79,6 +79,11 @@ class ContestDetailsViewController: UIViewController {
 //        print(contest)
         
         thumbnail.image = contest.thumbnail
+        
+        //Make the avatar look round
+        thumbnail.layer.cornerRadius = thumbnail.frame.width / 2
+        thumbnail.layer.masksToBounds = true
+        
         votes.text = "\(contest.votes)"
         contestTitle.text = contest.title
         artist.text = contest.artist

@@ -14,6 +14,7 @@ struct Contestant {
     let videoSubmission:AnyObject?
     let imageSubmission:UIImage?
     var score:Int = 0
+    var voted = false
     
     init(){
         self.avatar = nil

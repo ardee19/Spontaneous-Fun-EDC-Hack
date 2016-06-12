@@ -26,16 +26,29 @@ class ContestDetailsViewController: UIViewController {
         didSet {
             if let image = selectedContestant.imageSubmission {
                 imageDance.image = image
+                
             }
         }
     }
     
+    var currentContestantIndex = 0
+    
+    func selectContestant(contestant:Contestant, index:Int) {
+        self.selectedContestant = contestant
+        self.currentContestantIndex = index
+        print("currentContestantIndex: \(currentContestantIndex)")
+    }
 
     var totalScrollwidth = 376 {
         didSet {
             self.scrollview.contentSize = CGSizeMake(CGFloat(totalScrollwidth), 60)
         }
     }
+    
+    var votedFlag = false
+    
+
+    
     
     public var contestants = [
         Contestant(avatar: UIImage(named:"avatar-1")!, video: nil, imageSubmission: UIImage(named:"totem-1"), score: 10),
@@ -108,7 +121,33 @@ class ContestDetailsViewController: UIViewController {
     
     func avatarButtonPressed(button:UIButton) {
         let index = button.tag - 100 - 1
-        self.selectedContestant = contestants[index]
+        
+        selectContestant(contestants[index], index: index)
+        
+//        self.selectedContestant = contestants[index]
+    }
+    
+    var upVotedImage = UIImage(named: "vote-active")
+    var noVoteImage = UIImage(named: "vote-inactive")
+    
+    @IBAction func upVote(sender: UIButton) {
+        if !contestants[currentContestantIndex].voted {
+            print("upVoted")
+//            selectedContestant.score += 1
+//            print(selectedContestant.score)
+            contestants[currentContestantIndex].score += 1
+            contestants[currentContestantIndex].voted = true
+            sender.setImage(upVotedImage, forState: .Normal)
+            setAvatar()
+            
+//            votedFlag = true
+        } else {
+            contestants[currentContestantIndex].score -= 1
+            contestants[currentContestantIndex].voted = false
+            sender.setImage(noVoteImage, forState: .Normal)
+            setAvatar()
+            print("You already voted")
+        }
     }
 
     override func didReceiveMemoryWarning() {

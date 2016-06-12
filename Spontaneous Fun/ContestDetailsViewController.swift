@@ -116,11 +116,10 @@ class ContestDetailsViewController: UIViewController {
             
             let label:UILabel = UILabel(frame: CGRectMake(0, 45, 47, 14))
             label.font = UIFont(name: "AvenirNext-Regular", size: 10)
-            label.textColor = UIColor.greenColor()
+            label.textColor = UIColor(red: 239/255, green: 8/255, blue: 255/255, alpha: 1)
             label.textAlignment = .Center
             label.text = "^\(contestants[i-1].score)"
             view.addSubview(label)
-            
             self.scrollview.addSubview(view)
             
         }

@@ -65,26 +65,9 @@ class ContestDetailsViewController: UIViewController {
         
         self.scrollview.contentSize = CGSizeMake(CGFloat(totalScrollwidth), 60)
         
+        imageDance.image = contestants[0].imageSubmission
+        
         setAvatar()
-        
-
-        
-//        for i in 1...10 {
-//            let iCG = CGFloat(integerLiteral: i)
-//            let view = UIView(frame: CGRectMake(60.0 * iCG,0,60,60))
-//            if i % 2 == 0 {
-//                view.backgroundColor = UIColor.purpleColor()
-//            } else {
-//                view.backgroundColor = UIColor.orangeColor()
-//            }
-//            self.scrollview.addSubview(view)
-//        }
-//        
-//        let view2: UIView = UIView(frame: CGRectMake(60, 0, 60, 60))
-//        view2.backgroundColor = UIColor.redColor()
-//        self.scrollview.addSubview(view2)
-
-
     }
     
     func setAvatar() {
@@ -99,11 +82,17 @@ class ContestDetailsViewController: UIViewController {
             imageView.contentMode = .ScaleAspectFit
             imageView.image = contestants[i-1].avatar
             
-            
+            //Make the avatar look round
             imageView.layer.cornerRadius = imageView.frame.width / 2
             imageView.layer.masksToBounds = true
             
             view.addSubview(imageView)
+            
+            let button:UIButton = UIButton(frame: CGRectMake(0, 0, 47, 60))
+            button.setTitle("", forState: .Normal)
+            button.addTarget(self, action: #selector(ContestDetailsViewController.avatarButtonPressed(_:)), forControlEvents: .TouchUpInside)
+            button.tag = 100 + i
+            view.addSubview(button)
             
             let label:UILabel = UILabel(frame: CGRectMake(0, 45, 47, 14))
             label.font = UIFont(name: "AvenirNext-Regular", size: 10)
@@ -115,6 +104,11 @@ class ContestDetailsViewController: UIViewController {
             self.scrollview.addSubview(view)
             
         }
+    }
+    
+    func avatarButtonPressed(button:UIButton) {
+        let index = button.tag - 100 - 1
+        self.selectedContestant = contestants[index]
     }
 
     override func didReceiveMemoryWarning() {

@@ -142,6 +142,9 @@
                                 <rect key="frame" x="561" y="11" width="19" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add-icon"/>
+                                <connections>
+                                    <action selector="addContest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EzL-Ih-y4D"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

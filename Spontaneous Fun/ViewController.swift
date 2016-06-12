@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     var selectedContest = Contest()
     
+    @IBAction func addContest(sender: UIButton) {
+        JLToast.makeText("Yeah Fam").show()
+    }
     let contestData:[Contest] = [
         Contest(title: "Ugliest Shuffle", artist: "Dada Life ⋆ Champagne Shower", votes: 59, thumbnail: UIImage(named:"dada-life")!, countdown: "4:00:00"),
         Contest(title: "Amazing Lights", artist: "Kaskade ⋆ Signed Hat", votes: 37, thumbnail: UIImage(named:"kaskade")!, countdown: "5:00:10"),

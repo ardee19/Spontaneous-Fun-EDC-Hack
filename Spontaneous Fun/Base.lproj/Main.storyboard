@@ -246,12 +246,22 @@
                                             <constraint firstAttribute="height" constant="60" id="Gbp-jc-4Qm"/>
                                         </constraints>
                                     </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyA-Lo-eqm">
+                                        <rect key="frame" x="546" y="285" width="28" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="DIO-yG-Gxy"/>
+                                            <constraint firstAttribute="width" constant="28" id="o6f-RQ-rNz"/>
+                                        </constraints>
+                                        <state key="normal" image="solid-heart-eyes"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="mDD-ki-Gny" firstAttribute="top" secondItem="qWy-gx-5NL" secondAttribute="top" id="0oF-dJ-SqR"/>
                                     <constraint firstItem="mDD-ki-Gny" firstAttribute="leading" secondItem="qWy-gx-5NL" secondAttribute="leading" constant="8" id="KyV-qe-vXF"/>
                                     <constraint firstAttribute="trailing" secondItem="mDD-ki-Gny" secondAttribute="trailing" constant="8" id="dU2-zE-rhc"/>
+                                    <constraint firstAttribute="trailing" secondItem="EyA-Lo-eqm" secondAttribute="trailing" constant="26" id="gbw-Kd-sE4"/>
+                                    <constraint firstAttribute="bottom" secondItem="EyA-Lo-eqm" secondAttribute="bottom" constant="39" id="geM-9u-aXf"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="centerY" secondItem="qWy-gx-5NL" secondAttribute="centerY" id="kJs-9G-NBE"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="height" secondItem="qWy-gx-5NL" secondAttribute="height" id="sL4-N8-lWm"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="width" secondItem="qWy-gx-5NL" secondAttribute="width" id="y4O-fH-0mx"/>
@@ -540,5 +550,6 @@
         <image name="join" width="52" height="38"/>
         <image name="notification" width="28" height="22"/>
         <image name="search" width="19" height="19"/>
+        <image name="solid-heart-eyes" width="28" height="28"/>
     </resources>
 </document>

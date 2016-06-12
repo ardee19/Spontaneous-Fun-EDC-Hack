@@ -64,7 +64,8 @@ class JoinViewController: UIViewController {
         if segue.identifier == Segue.unWindToContestDetails {
             let destination = segue.destinationViewController as! ContestDetailsViewController
             destination.contestants.insert(contestant, atIndex: 0)
-            destination.selectedContestant = contestant
+//            destination.selectedContestant = contestant
+            destination.selectContestant(contestant, index: 0)
         }
     }
 }

@@ -238,9 +238,18 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDance" translatesAutoresizingMaskIntoConstraints="NO" id="oef-Bs-OKK">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="336"/>
                                     </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDD-ki-Gny">
+                                        <rect key="frame" x="8" y="0.0" width="584" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Gbp-jc-4Qm"/>
+                                        </constraints>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="mDD-ki-Gny" firstAttribute="top" secondItem="qWy-gx-5NL" secondAttribute="top" id="0oF-dJ-SqR"/>
+                                    <constraint firstItem="mDD-ki-Gny" firstAttribute="leading" secondItem="qWy-gx-5NL" secondAttribute="leading" constant="8" id="KyV-qe-vXF"/>
+                                    <constraint firstAttribute="trailing" secondItem="mDD-ki-Gny" secondAttribute="trailing" constant="8" id="dU2-zE-rhc"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="centerY" secondItem="qWy-gx-5NL" secondAttribute="centerY" id="kJs-9G-NBE"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="height" secondItem="qWy-gx-5NL" secondAttribute="height" id="sL4-N8-lWm"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="width" secondItem="qWy-gx-5NL" secondAttribute="width" id="y4O-fH-0mx"/>
@@ -296,6 +305,7 @@
                     <connections>
                         <outlet property="artist" destination="jZd-aY-8Ji" id="eO4-Vf-fsS"/>
                         <outlet property="contestTitle" destination="SeG-l8-sEn" id="Lqd-dI-UvU"/>
+                        <outlet property="scrollview" destination="mDD-ki-Gny" id="qq7-gb-3Od"/>
                         <outlet property="thumbnail" destination="h5y-ZY-GvU" id="Qb4-V3-bSZ"/>
                         <outlet property="votes" destination="NkR-Ai-AE4" id="mFS-Mh-2rf"/>
                         <segue destination="FYj-Is-tMA" kind="show" identifier="joinContest" id="khf-TT-XzP"/>

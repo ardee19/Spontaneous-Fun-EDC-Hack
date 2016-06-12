@@ -254,7 +254,7 @@
                                         <rect key="frame" x="274" y="56" width="52" height="38"/>
                                         <state key="normal" image="join"/>
                                         <connections>
-                                            <segue destination="FYj-Is-tMA" kind="show" identifier="joinContest" id="e9S-sM-Rv2"/>
+                                            <action selector="joinTapped:" destination="h1D-aX-EO4" eventType="touchUpInside" id="9ru-52-Z9E"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -293,6 +293,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="artist" destination="jZd-aY-8Ji" id="eO4-Vf-fsS"/>
+                        <outlet property="contestTitle" destination="SeG-l8-sEn" id="Lqd-dI-UvU"/>
+                        <outlet property="thumbnail" destination="h5y-ZY-GvU" id="Qb4-V3-bSZ"/>
+                        <outlet property="votes" destination="NkR-Ai-AE4" id="mFS-Mh-2rf"/>
+                        <segue destination="FYj-Is-tMA" kind="show" identifier="joinContest" id="khf-TT-XzP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANf-ts-5Fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,8 +383,8 @@
                                         <color key="textColor" red="0.91372549020000005" green="0.023529411760000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="UGLIEST SHUFFLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1o-mu-ldM">
-                                        <rect key="frame" x="55" y="20" width="471" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UGLIEST SHUFFLE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1o-mu-ldM">
+                                        <rect key="frame" x="55" y="20" width="471" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="lee-KP-1mh"/>
                                         </constraints>
@@ -420,6 +427,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Join" id="jLM-a5-tWM"/>
+                    <connections>
+                        <outlet property="artist" destination="Yup-lq-s1G" id="ULf-4S-sAP"/>
+                        <outlet property="contestTitle" destination="t1o-mu-ldM" id="Rvw-ot-KRg"/>
+                        <outlet property="thumbnail" destination="apH-om-PIY" id="anH-vd-EiE"/>
+                        <outlet property="votes" destination="grW-bt-Lrd" id="FiO-Ka-Vg4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU3-ui-zXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

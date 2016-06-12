@@ -9,9 +9,21 @@
 import UIKit
 
 class JoinViewController: UIViewController {
+    
+    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var votes: UILabel!
+    @IBOutlet weak var contestTitle: UILabel!
+    @IBOutlet weak var artist: UILabel!
+    
+    var contest:Contest = Contest()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        thumbnail.image = contest.thumbnail
+        votes.text = contest.countdown
+        contestTitle.text = contest.title
+        artist.text = contest.artist
 
         // Do any additional setup after loading the view.
     }

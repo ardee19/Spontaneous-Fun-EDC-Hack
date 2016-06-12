@@ -20,7 +20,11 @@ class ContestDetailsViewController: UIViewController {
     
     var contest:Contest = Contest()
 
-    var totalScrollwidth = 600
+    var totalScrollwidth = 376 {
+        didSet {
+            self.scrollview.contentSize = CGSizeMake(CGFloat(totalScrollwidth), 60)
+        }
+    }
     
     var contestants = [
         Contestant(avatar: UIImage(named:"avatar-1")!, video: nil, imageSubmission: nil, score: 10),
@@ -31,7 +35,11 @@ class ContestDetailsViewController: UIViewController {
         Contestant(avatar: UIImage(named:"avatar-6")!, video: nil, imageSubmission: nil, score: 60),
         Contestant(avatar: UIImage(named:"avatar-7")!, video: nil, imageSubmission: nil, score: 70),
         Contestant(avatar: UIImage(named:"avatar-8")!, video: nil, imageSubmission: nil, score: 80),
-    ]
+        ] {
+        didSet{
+            totalScrollwidth = contestants.count * 47
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

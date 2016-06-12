@@ -28,20 +28,30 @@ class JoinViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var imagePicked: UIImageView!
+    @IBAction func cameraButtonTapped(sender: UIButton) {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = false
+//        picker.sourceType = .PhotoLibrary
+//        picker.modalPresentationStyle = .FullScreen
+//        presentViewController(picker, animated: true, completion: nil)
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+        }
+        presentViewController(picker, animated: true, completion: nil)
     }
+}
+
+extension JoinViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerOriginalImage] {
+            imagePicked.image = image as? UIImage
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
-    */
-
 }

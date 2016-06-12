@@ -418,11 +418,55 @@
                                     <constraint firstItem="apH-om-PIY" firstAttribute="leading" secondItem="eYr-JW-mra" secondAttribute="leading" constant="8" id="xBL-VL-tf4"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQ7-3C-QGU">
+                                <rect key="frame" x="0.0" y="132" width="600" height="335"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-MQ-Ems">
+                                        <rect key="frame" x="0.0" y="1" width="600" height="335"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Fg7-MQ-Ems" firstAttribute="centerX" secondItem="dQ7-3C-QGU" secondAttribute="centerX" id="5sO-k1-vaP"/>
+                                    <constraint firstItem="Fg7-MQ-Ems" firstAttribute="width" secondItem="dQ7-3C-QGU" secondAttribute="width" id="7ty-gt-ZkR"/>
+                                    <constraint firstItem="Fg7-MQ-Ems" firstAttribute="centerY" secondItem="dQ7-3C-QGU" secondAttribute="centerY" id="NLz-25-KfC"/>
+                                    <constraint firstItem="Fg7-MQ-Ems" firstAttribute="height" secondItem="dQ7-3C-QGU" secondAttribute="height" id="oFr-AQ-zRT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIU-Yw-iHN">
+                                <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3XZ-kq-Zvt">
+                                        <rect key="frame" x="270" y="45" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="CYt-Nt-19f"/>
+                                            <constraint firstAttribute="height" constant="60" id="nHz-O4-7Qi"/>
+                                        </constraints>
+                                        <state key="normal" image="cameraButton"/>
+                                        <connections>
+                                            <action selector="cameraButtonTapped:" destination="FYj-Is-tMA" eventType="touchUpInside" id="urC-ek-maI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3XZ-kq-Zvt" firstAttribute="centerX" secondItem="cIU-Yw-iHN" secondAttribute="centerX" id="BzB-FS-YGg"/>
+                                    <constraint firstItem="3XZ-kq-Zvt" firstAttribute="centerY" secondItem="cIU-Yw-iHN" secondAttribute="centerY" id="eWe-nl-O4Y"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cIU-Yw-iHN" secondAttribute="trailing" constant="-20" id="12R-6k-Zh9"/>
                             <constraint firstItem="eYr-JW-mra" firstAttribute="leading" secondItem="pr5-iU-lOF" secondAttribute="leadingMargin" constant="-20" id="KBM-eJ-Vak"/>
                             <constraint firstItem="eYr-JW-mra" firstAttribute="top" secondItem="HKw-5d-NUv" secondAttribute="bottom" id="RAY-EI-Lry"/>
+                            <constraint firstItem="P2o-pL-2mA" firstAttribute="top" secondItem="cIU-Yw-iHN" secondAttribute="bottom" id="So5-ac-dYk"/>
+                            <constraint firstItem="dQ7-3C-QGU" firstAttribute="top" secondItem="eYr-JW-mra" secondAttribute="bottom" constant="8" id="TEX-vG-ctN"/>
+                            <constraint firstItem="cIU-Yw-iHN" firstAttribute="height" secondItem="pr5-iU-lOF" secondAttribute="height" multiplier="1/4" id="Xln-oO-FC9"/>
+                            <constraint firstItem="cIU-Yw-iHN" firstAttribute="top" secondItem="dQ7-3C-QGU" secondAttribute="bottom" constant="-17" id="dyb-Wk-a6D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dQ7-3C-QGU" secondAttribute="trailing" constant="-20" id="lI7-Wq-dJF"/>
+                            <constraint firstItem="cIU-Yw-iHN" firstAttribute="leading" secondItem="pr5-iU-lOF" secondAttribute="leadingMargin" constant="-20" id="rTk-7W-3jv"/>
+                            <constraint firstItem="dQ7-3C-QGU" firstAttribute="leading" secondItem="pr5-iU-lOF" secondAttribute="leadingMargin" constant="-20" id="w6u-YI-dM7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eYr-JW-mra" secondAttribute="trailing" constant="-20" id="zlO-11-R2J"/>
                         </constraints>
                     </view>
@@ -430,6 +474,7 @@
                     <connections>
                         <outlet property="artist" destination="Yup-lq-s1G" id="ULf-4S-sAP"/>
                         <outlet property="contestTitle" destination="t1o-mu-ldM" id="Rvw-ot-KRg"/>
+                        <outlet property="imagePicked" destination="Fg7-MQ-Ems" id="lL4-BA-5CD"/>
                         <outlet property="thumbnail" destination="apH-om-PIY" id="anH-vd-EiE"/>
                         <outlet property="votes" destination="grW-bt-Lrd" id="FiO-Ka-Vg4"/>
                     </connections>
@@ -465,6 +510,7 @@
     </scenes>
     <resources>
         <image name="add-icon" width="19" height="19"/>
+        <image name="cameraButton" width="138" height="138"/>
         <image name="chainsmokers" width="156" height="156"/>
         <image name="contestants-icon-sm" width="10" height="9"/>
         <image name="imageDance" width="640" height="640"/>

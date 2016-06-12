@@ -16,6 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // set Selected Cell background Color
+        let colorView = UIView()
+        colorView.backgroundColor = Palette.SECONDARY_BACKGROUND
+        UITableViewCell.appearance().selectedBackgroundView = colorView
+        
+        // Navigation Bar Style
+        UINavigationBar.appearance().barTintColor = UIColor.blackColor()
+        UINavigationBar.appearance().tintColor =  UIColor(red: 239.0/255.0, green: 8.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "back")
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "back")
+        UINavigationBar.appearance().opaque = false
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60.0), forBarMetrics: UIBarMetrics.Default)
+        
+        // Navigation title text font and size
+        UINavigationBar.appearance().titleTextAttributes =
+            [NSForegroundColorAttributeName:UIColor(red: 239.0/255.0, green: 8.0/255.0, blue: 255.0/255.0, alpha: 1.0), NSFontAttributeName:FontPalette.AVENIR_NEXT_HEAVY_16]
+        UIBarButtonItem.appearance().setTitleTextAttributes(
+            [NSForegroundColorAttributeName:UIColor(red: 239.0/255.0, green: 8.0/255.0, blue: 255.0/255.0, alpha: 1.0), NSFontAttributeName:FontPalette.AVENIR_NEXT_HEAVY_16],
+            forState: .Normal
+        )
+        // Navigation title vertical offset
+        UINavigationBar.appearance().setTitleVerticalPositionAdjustment(0.0, forBarMetrics: UIBarMetrics.Default)
+        
         return true
     }
 

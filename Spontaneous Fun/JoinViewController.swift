@@ -21,7 +21,7 @@ class JoinViewController: UIViewController {
         super.viewDidLoad()
         
         thumbnail.image = contest.thumbnail
-        votes.text = contest.countdown
+        votes.text = "\(contest.votes)"
         contestTitle.text = contest.title
         artist.text = contest.artist
 

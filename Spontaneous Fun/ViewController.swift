@@ -22,6 +22,13 @@ class ViewController: UIViewController {
         Contest(title: "Plurest Fam", artist: "Martin Garrix ⋆ VIP Experience", votes: 297, thumbnail: UIImage(named:"martin-garrix")!, countdown: "6:40:30"),
     ]
     
+    let userContestData:[Contest] = [
+        Contest(title: "Ugliest Shuffle", artist: "Dada Life ⋆ Champagne Shower", votes: 59, thumbnail: UIImage(named:"avatar-12")!, countdown: "4:00:00"),
+        Contest(title: "Amazing Lights", artist: "Kaskade ⋆ Signed Hat", votes: 37, thumbnail: UIImage(named:"avatar-11")!, countdown: "5:00:10"),
+        Contest(title: "Emotional Totems", artist: "Flux Favillion ⋆ Launch the Bass Cannon", votes: 21, thumbnail: UIImage(named:"avatar-10")!, countdown: "6:00:30"),
+        Contest(title: "Illest Festival Flag", artist: "The Chainsmokers ⋆ Backstage Passes", votes: 133, thumbnail: UIImage(named:"avatar-9")!, countdown: "6:30:30"),
+        Contest(title: "Plurest Fam", artist: "Martin Garrix ⋆ VIP Experience", votes: 297, thumbnail: UIImage(named:"avatar-8")!, countdown: "6:40:30"),
+        ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,11 +107,31 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("contestcell", forIndexPath: indexPath) as! ContestCell
         
         
-        cell.title.text = contestData[indexPath.row].title
-        cell.artist.text = contestData[indexPath.row].artist
-        cell.thumbnail.image = contestData[indexPath.row].thumbnail
-        cell.votes.text = "\(contestData[indexPath.row].votes)"
-        cell.countdown.text = contestData[indexPath.row].countdown
+//        cell.title.text = contestData[indexPath.row].title
+//        cell.artist.text = contestData[indexPath.row].artist
+//        cell.thumbnail.image = contestData[indexPath.row].thumbnail
+//        cell.votes.text = "\(contestData[indexPath.row].votes)"
+//        cell.countdown.text = contestData[indexPath.row].countdown
+        
+        if indexPath.section == 0 {
+            cell.title.text = contestData[indexPath.row].title
+            cell.artist.text = contestData[indexPath.row].artist
+            cell.thumbnail.image = contestData[indexPath.row].thumbnail
+            cell.votes.text = "\(contestData[indexPath.row].votes)"
+            cell.countdown.text = contestData[indexPath.row].countdown
+        } else if indexPath.section == 1 {
+            cell.title.text = userContestData[indexPath.row].title
+            cell.artist.text = userContestData[indexPath.row].artist
+            cell.thumbnail.image = userContestData[indexPath.row].thumbnail
+            cell.votes.text = "\(userContestData[indexPath.row].votes)"
+            cell.countdown.text = userContestData[indexPath.row].countdown
+        } else {
+            cell.title.text = contestData[indexPath.row].title
+            cell.artist.text = contestData[indexPath.row].artist
+            cell.thumbnail.image = contestData[indexPath.row].thumbnail
+            cell.votes.text = "\(contestData[indexPath.row].votes)"
+            cell.countdown.text = contestData[indexPath.row].countdown
+        }
         
         //Make the thumbnail round
         cell.thumbnail.layer.cornerRadius = cell.thumbnail.frame.width / 2
@@ -115,7 +142,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        selectedContest = contestData[indexPath.row]
+        if indexPath.section == 0 {
+            selectedContest = contestData[indexPath.row]
+        } else if indexPath.section == 1 {
+            selectedContest = userContestData[indexPath.row]
+        } else {
+            selectedContest = contestData[indexPath.row]
+        }
+        
+        
+        
         self.performSegueWithIdentifier("contestDetails", sender: nil)
     }
     

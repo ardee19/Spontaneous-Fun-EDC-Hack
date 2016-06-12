@@ -127,11 +127,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ubJ-S0-jZA">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="JhH-8N-yyW">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NG9-fR-FU9">
-                                <rect key="frame" x="20" y="11" width="19" height="22"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Nkf-Tz-Mfh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0vx-VS-UF9">
+                                <rect key="frame" x="20" y="11" width="28" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="search"/>
+                                <state key="normal" image="notification"/>
+                                <connections>
+                                    <segue destination="Acb-Ab-9o1" kind="show" id="woz-2A-VHO"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Pfj-jk-o2N">
@@ -305,18 +308,7 @@
                             <constraint firstItem="qWy-gx-5NL" firstAttribute="leading" secondItem="NMX-YX-WlI" secondAttribute="leadingMargin" constant="-20" id="tzg-tu-3JP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CONTEST" id="IZy-av-ybJ">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="2DR-Zd-i8z">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PnY-9d-cK2">
-                                <rect key="frame" x="552" y="11" width="28" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="notification"/>
-                                <connections>
-                                    <segue destination="Acb-Ab-9o1" kind="show" id="XVN-ji-0ai"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="CONTEST" id="IZy-av-ybJ"/>
                     <connections>
                         <outlet property="artist" destination="jZd-aY-8Ji" id="eO4-Vf-fsS"/>
                         <outlet property="contestTitle" destination="SeG-l8-sEn" id="Lqd-dI-UvU"/>
@@ -361,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQh-hh-knf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2614" y="-79"/>
+            <point key="canvasLocation" x="1883" y="-273"/>
         </scene>
         <!--JOIN-->
         <scene sceneID="wGe-Th-Z68">
@@ -553,7 +545,6 @@
         <image name="imagePrize" width="640" height="1009"/>
         <image name="join" width="52" height="38"/>
         <image name="notification" width="28" height="22"/>
-        <image name="search" width="19" height="19"/>
         <image name="vote-inactive" width="38" height="49"/>
     </resources>
 </document>

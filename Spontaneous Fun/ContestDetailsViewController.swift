@@ -9,10 +9,14 @@
 import UIKit
 
 class ContestDetailsViewController: UIViewController {
+    
+    var contest:Contest = Contest()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(contest)
+        
         // Do any additional setup after loading the view.
     }
 

@@ -16,6 +16,14 @@ struct  Contest {
     let thumbnail:UIImage?
     var countdown: String?
     
+    init(){
+        self.title = nil
+        self.artist = nil
+        self.votes = nil
+        self.thumbnail = nil
+        self.countdown = nil
+    }
+    
     init(title:String, artist:String, votes:Int, thumbnail:UIImage, countdown:String) {
         self.title = title.capitalizedString
         self.artist = artist

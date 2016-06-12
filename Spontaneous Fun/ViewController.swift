@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableViewContest: UITableView!
     
+    var selectedContest = Contest()
+    
     let contestData:[Contest] = [
         Contest(title: "Ugliest Shuffle", artist: "Dada Life ⋆ Champagne Shower", votes: 59, thumbnail: UIImage(named:"dada-life")!, countdown: "4:00:00"),
         Contest(title: "Amazing Lights", artist: "Kaskade ⋆ Signed Hat", votes: 37, thumbnail: UIImage(named:"kaskade")!, countdown: "5:00:10"),
@@ -29,6 +31,16 @@ class ViewController: UIViewController {
         tableViewContest.dataSource = self
         tableViewContest.rowHeight = 60
         tableViewContest.estimatedRowHeight = 160.0
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == Segue.contestDetails {
+            let contestDetailsViewController = segue.destinationViewController as!ContestDetailsViewController
+            contestDetailsViewController.contest = selectedContest
+        }
+        
+
     }
 }
 
@@ -101,6 +113,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        selectedContest = contestData[indexPath.row]
         self.performSegueWithIdentifier("contestDetails", sender: nil)
     }
     

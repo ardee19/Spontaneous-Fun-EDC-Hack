@@ -18,6 +18,8 @@
 		6C1AD6A31D0BDDDF00CD820A /* Contest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A21D0BDDDF00CD820A /* Contest.swift */; };
 		6C1AD6A81D0CA07900CD820A /* ContestDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A71D0CA07900CD820A /* ContestDetailsViewController.swift */; };
 		6C1AD6AA1D0CB17900CD820A /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6A91D0CB17900CD820A /* JoinViewController.swift */; };
+		6C1AD6AC1D0CDBC000CD820A /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6AB1D0CDBC000CD820A /* Segue.swift */; };
+		6C1AD6AF1D0CDE8300CD820A /* ContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AD6AE1D0CDE8200CD820A /* ContestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		6C1AD6A21D0BDDDF00CD820A /* Contest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contest.swift; sourceTree = "<group>"; };
 		6C1AD6A71D0CA07900CD820A /* ContestDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestDetailsViewController.swift; sourceTree = "<group>"; };
 		6C1AD6A91D0CB17900CD820A /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		6C1AD6AB1D0CDBC000CD820A /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		6C1AD6AE1D0CDE8200CD820A /* ContestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +113,9 @@
 				6C1AD6A61D0CA04900CD820A /* ViewController */,
 				6C1AD6761D0BC18600CD820A /* Main.storyboard */,
 				6C1AD6791D0BC18600CD820A /* Assets.xcassets */,
+				6C1AD6AD1D0CDC1F00CD820A /* Classes */,
 				6C1AD67B1D0BC18600CD820A /* LaunchScreen.storyboard */,
 				6C1AD67E1D0BC18700CD820A /* Info.plist */,
-				6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */,
-				6C1AD6A21D0BDDDF00CD820A /* Contest.swift */,
 			);
 			path = "Spontaneous Fun";
 			sourceTree = "<group>";
@@ -143,6 +146,17 @@
 				6C1AD6A91D0CB17900CD820A /* JoinViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		6C1AD6AD1D0CDC1F00CD820A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6C1AD6AE1D0CDE8200CD820A /* ContestView.swift */,
+				6C1AD6AB1D0CDBC000CD820A /* Segue.swift */,
+				6C1AD6A01D0BDC5600CD820A /* ContestCell.swift */,
+				6C1AD6A21D0BDDDF00CD820A /* Contest.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +295,9 @@
 				6C1AD6A81D0CA07900CD820A /* ContestDetailsViewController.swift in Sources */,
 				6C1AD6731D0BC18600CD820A /* AppDelegate.swift in Sources */,
 				6C1AD6AA1D0CB17900CD820A /* JoinViewController.swift in Sources */,
+				6C1AD6AC1D0CDBC000CD820A /* Segue.swift in Sources */,
 				6C1AD6A11D0BDC5600CD820A /* ContestCell.swift in Sources */,
+				6C1AD6AF1D0CDE8300CD820A /* ContestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

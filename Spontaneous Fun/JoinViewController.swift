@@ -26,16 +26,18 @@ class JoinViewController: UIViewController {
         artist.text = contest.artist
 
         // Do any additional setup after loading the view.
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = false
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+        }
+        presentViewController(picker, animated: true, completion: nil)
     }
 
     @IBOutlet weak var imagePicked: UIImageView!
+    
     @IBAction func cameraButtonTapped(sender: UIButton) {
-//        let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.allowsEditing = false
-//        picker.sourceType = .PhotoLibrary
-//        picker.modalPresentationStyle = .FullScreen
-//        presentViewController(picker, animated: true, completion: nil)
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = false

@@ -25,7 +25,7 @@ struct  Contest {
     }
     
     init(title:String, artist:String, votes:Int, thumbnail:UIImage, countdown:String) {
-        self.title = title.capitalizedString
+        self.title = title.uppercaseString
         self.artist = artist
         self.votes = votes
         self.thumbnail = thumbnail

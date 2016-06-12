@@ -58,8 +58,8 @@ class ContestDetailsViewController: UIViewController {
     
     
     public var contestants = [
-        Contestant(avatar: UIImage(named:"avatar-1")!, video: nil, imageSubmission: UIImage(named:"totem-1"), score: 10),
-        Contestant(avatar: UIImage(named:"avatar-2")!, video: nil, imageSubmission: UIImage(named:"totem-2"), score: 20),
+        Contestant(avatar: UIImage(named:"avatar-1")!, video: nil, imageSubmission: UIImage(named:"imageDanceRaw"), score: 10),
+        Contestant(avatar: UIImage(named:"avatar-2")!, video: nil, imageSubmission: UIImage(named:"imageGroupRaw"), score: 20),
         Contestant(avatar: UIImage(named:"avatar-3")!, video: nil, imageSubmission: UIImage(named:"totem-3"), score: 30),
         Contestant(avatar: UIImage(named:"avatar-4")!, video: nil, imageSubmission: UIImage(named:"totem-4"), score: 40),
         Contestant(avatar: UIImage(named:"avatar-5")!, video: nil, imageSubmission: UIImage(named:"totem-5"), score: 50),

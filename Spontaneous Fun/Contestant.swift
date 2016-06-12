@@ -15,6 +15,13 @@ struct Contestant {
     let imageSubmission:UIImage?
     var score:Int = 0
     
+    init(){
+        self.avatar = nil
+        self.videoSubmission = nil
+        self.imageSubmission = nil
+        self.score = 0
+    }
+    
     init(avatar:UIImage, video:AnyObject?, imageSubmission:UIImage?, score:Int?) {
         self.avatar = avatar
         self.videoSubmission = video

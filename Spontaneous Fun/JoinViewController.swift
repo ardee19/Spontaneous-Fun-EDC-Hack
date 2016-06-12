@@ -44,6 +44,27 @@ class JoinViewController: UIViewController {
         }
         presentViewController(picker, animated: true, completion: nil)
     }
+    
+    var imageTaken = false
+    
+    var contestant = Contestant(avatar: UIImage(named: "pierre")!, video: nil, imageSubmission: nil, score: 0)
+    
+    @IBAction func submitButtonTapped(sender: UIBarButtonItem) {
+        if imageTaken {
+            contestant = Contestant(avatar: UIImage(named: "pierre")!, video: nil, imageSubmission: imagePicked.image, score: 0)
+            
+            self.performSegueWithIdentifier(Segue.unWindToContestDetails, sender: nil )
+        }
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == Segue.unWindToContestDetails {
+            let destination = segue.destinationViewController as! ContestDetailsViewController
+            destination.contestants.insert(contestant, atIndex: 0)
+            destination.selectedContestant = contestant
+        }
+    }
 }
 
 extension JoinViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -51,6 +72,7 @@ extension JoinViewController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] {
             imagePicked.image = image as? UIImage
+            imageTaken = true
             dismissViewControllerAnimated(true, completion: nil)
         }
     }

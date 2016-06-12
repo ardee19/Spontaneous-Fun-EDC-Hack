@@ -235,7 +235,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWy-gx-5NL">
                                 <rect key="frame" x="0.0" y="132" width="600" height="336"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDance" translatesAutoresizingMaskIntoConstraints="NO" id="oef-Bs-OKK">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDance" translatesAutoresizingMaskIntoConstraints="NO" id="oef-Bs-OKK">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="336"/>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDD-ki-Gny">
@@ -305,6 +305,7 @@
                     <connections>
                         <outlet property="artist" destination="jZd-aY-8Ji" id="eO4-Vf-fsS"/>
                         <outlet property="contestTitle" destination="SeG-l8-sEn" id="Lqd-dI-UvU"/>
+                        <outlet property="imageDance" destination="oef-Bs-OKK" id="Egf-1z-uUy"/>
                         <outlet property="scrollview" destination="mDD-ki-Gny" id="qq7-gb-3Od"/>
                         <outlet property="thumbnail" destination="h5y-ZY-GvU" id="Qb4-V3-bSZ"/>
                         <outlet property="votes" destination="NkR-Ai-AE4" id="mFS-Mh-2rf"/>
@@ -481,16 +482,24 @@
                             <constraint firstAttribute="trailingMargin" secondItem="eYr-JW-mra" secondAttribute="trailing" constant="-20" id="zlO-11-R2J"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Join" id="jLM-a5-tWM"/>
+                    <navigationItem key="navigationItem" title="Join" id="jLM-a5-tWM">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="kmB-9j-vAw">
+                            <connections>
+                                <action selector="submitButtonTapped:" destination="FYj-Is-tMA" id="yQ7-sG-k5p"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="artist" destination="Yup-lq-s1G" id="ULf-4S-sAP"/>
                         <outlet property="contestTitle" destination="t1o-mu-ldM" id="Rvw-ot-KRg"/>
                         <outlet property="imagePicked" destination="Fg7-MQ-Ems" id="lL4-BA-5CD"/>
                         <outlet property="thumbnail" destination="apH-om-PIY" id="anH-vd-EiE"/>
                         <outlet property="votes" destination="grW-bt-Lrd" id="FiO-Ka-Vg4"/>
+                        <segue destination="zBC-HK-egR" kind="unwind" identifier="unWindToContestDetails" unwindAction="unWindToContestDetails:" id="38b-De-6LL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU3-ui-zXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="zBC-HK-egR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2617" y="715"/>
         </scene>

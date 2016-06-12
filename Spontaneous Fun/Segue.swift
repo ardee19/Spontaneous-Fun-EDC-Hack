@@ -11,4 +11,5 @@ import Foundation
 struct Segue {
     static let contestDetails = "contestDetails"
     static let joinContest = "joinContest"
+    static let unWindToContestDetails = "unWindToContestDetails"
 }

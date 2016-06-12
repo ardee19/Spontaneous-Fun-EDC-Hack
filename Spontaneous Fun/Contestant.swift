@@ -9,16 +9,19 @@
 import Foundation
 import UIKit
 
-struct Contestants {
+struct Contestant {
     let avatar:UIImage?
     let videoSubmission:AnyObject?
     let imageSubmission:UIImage?
-    var score:Int?
+    var score:Int = 0
     
-    init(avatar:UIImage, video:AnyObject, imageSubmission:UIImage, score:Int) {
+    init(avatar:UIImage, video:AnyObject?, imageSubmission:UIImage?, score:Int?) {
         self.avatar = avatar
         self.videoSubmission = video
         self.imageSubmission = imageSubmission
-        self.score = score
+        if let yesScore = score {
+            self.score = yesScore
+        }
+        
     }
 }

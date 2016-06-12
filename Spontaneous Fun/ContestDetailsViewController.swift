@@ -22,6 +22,17 @@ class ContestDetailsViewController: UIViewController {
 
     var totalScrollwidth = 600
     
+    var contestants = [
+        Contestant(avatar: UIImage(named:"avatar-1")!, video: nil, imageSubmission: nil, score: 10),
+        Contestant(avatar: UIImage(named:"avatar-2")!, video: nil, imageSubmission: nil, score: 20),
+        Contestant(avatar: UIImage(named:"avatar-3")!, video: nil, imageSubmission: nil, score: 30),
+        Contestant(avatar: UIImage(named:"avatar-4")!, video: nil, imageSubmission: nil, score: 40),
+        Contestant(avatar: UIImage(named:"avatar-5")!, video: nil, imageSubmission: nil, score: 50),
+        Contestant(avatar: UIImage(named:"avatar-6")!, video: nil, imageSubmission: nil, score: 60),
+        Contestant(avatar: UIImage(named:"avatar-7")!, video: nil, imageSubmission: nil, score: 70),
+        Contestant(avatar: UIImage(named:"avatar-8")!, video: nil, imageSubmission: nil, score: 80),
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,27 +45,32 @@ class ContestDetailsViewController: UIViewController {
         
         self.scrollview.contentSize = CGSizeMake(CGFloat(totalScrollwidth), 60)
         
+        for i in 1...contestants.count {
+            let integerToCG = CGFloat(i)
+            
+            let view: UIView = UIView(frame: CGRectMake((integerToCG-1)*47, 0, 47, 60))
+            let imageView = UIImageView(frame: CGRectMake(4, 4, 39, 39))
+            imageView.contentMode = .ScaleAspectFit
+            imageView.image = contestants[i-1].avatar
+            
+            
+            imageView.layer.cornerRadius = imageView.frame.width / 2
+            imageView.layer.masksToBounds = true
+            
+            view.addSubview(imageView)
+            
+            let label:UILabel = UILabel(frame: CGRectMake(0, 45, 47, 14))
+            label.font = UIFont(name: "AvenirNext-Regular", size: 10)
+            label.textColor = UIColor.greenColor()
+            label.textAlignment = .Center
+            label.text = "^\(contestants[i-1].score)"
+            view.addSubview(label)
+            
+            self.scrollview.addSubview(view)
+            
+        }
         
-        let view: UIView = UIView(frame: CGRectMake(0, 0, 47, 60))
-//        view.backgroundColor = UIColor.greenColor()
-        let imageView = UIImageView(frame: CGRectMake(4, 4, 39, 39))
-        imageView.contentMode = .ScaleAspectFit
-        imageView.image = UIImage(named: "avatar-1")
-        
-        
-        imageView.layer.cornerRadius = imageView.frame.width / 2
-        imageView.layer.masksToBounds = true
-        
-        view.addSubview(imageView)
-        
-        let label:UILabel = UILabel(frame: CGRectMake(0, 45, 47, 14))
-        label.font = UIFont(name: "AvenirNext-Regular", size: 10)
-        label.textColor = UIColor.greenColor()
-        label.textAlignment = .Center
-        label.text = "^412"
-        view.addSubview(label)
-    
-        self.scrollview.addSubview(view)
+
         
 //        for i in 1...10 {
 //            let iCG = CGFloat(integerLiteral: i)

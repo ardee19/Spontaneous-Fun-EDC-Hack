@@ -46,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C1AD66F1D0BC18600CD820A /* Squad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C1AD66F1D0BC18600CD820A /* Yeah FAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yeah FAM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C1AD6721D0BC18600CD820A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C1AD6741D0BC18600CD820A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6C1AD6771D0BC18600CD820A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		6C1AD6701D0BC18600CD820A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C1AD66F1D0BC18600CD820A /* Squad.app */,
+				6C1AD66F1D0BC18600CD820A /* Yeah FAM.app */,
 				6C1AD6831D0BC18700CD820A /* Spontaneous FunTests.xctest */,
 				6C1AD68E1D0BC18700CD820A /* Spontaneous FunUITests.xctest */,
 			);
@@ -210,7 +210,7 @@
 			);
 			name = "Spontaneous Fun";
 			productName = "Spontaneous Fun";
-			productReference = 6C1AD66F1D0BC18600CD820A /* Squad.app */;
+			productReference = 6C1AD66F1D0BC18600CD820A /* Yeah FAM.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6C1AD6821D0BC18700CD820A /* Spontaneous FunTests */ = {
@@ -487,7 +487,7 @@
 				INFOPLIST_FILE = "Spontaneous Fun/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.edchack.Spontaneous-Fun";
-				PRODUCT_NAME = Squad;
+				PRODUCT_NAME = "Yeah FAM";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -501,7 +501,7 @@
 				INFOPLIST_FILE = "Spontaneous Fun/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.edchack.Spontaneous-Fun";
-				PRODUCT_NAME = Squad;
+				PRODUCT_NAME = "Yeah FAM";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;

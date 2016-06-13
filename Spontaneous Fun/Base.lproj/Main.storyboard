@@ -303,10 +303,10 @@
                                         </constraints>
                                     </scrollView>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyA-Lo-eqm">
-                                        <rect key="frame" x="309" y="298" width="58" height="74"/>
+                                        <rect key="frame" x="304" y="279" width="53" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="74" id="DIO-yG-Gxy"/>
-                                            <constraint firstAttribute="width" constant="58" id="o6f-RQ-rNz"/>
+                                            <constraint firstAttribute="height" constant="80" id="DIO-yG-Gxy"/>
+                                            <constraint firstAttribute="width" constant="53" id="o6f-RQ-rNz"/>
                                         </constraints>
                                         <state key="normal" image="vote-inactive"/>
                                         <connections>
@@ -319,8 +319,8 @@
                                     <constraint firstItem="mDD-ki-Gny" firstAttribute="top" secondItem="qWy-gx-5NL" secondAttribute="top" constant="4" id="0oF-dJ-SqR"/>
                                     <constraint firstItem="mDD-ki-Gny" firstAttribute="leading" secondItem="qWy-gx-5NL" secondAttribute="leading" constant="6" id="KyV-qe-vXF"/>
                                     <constraint firstAttribute="trailing" secondItem="mDD-ki-Gny" secondAttribute="trailing" id="dU2-zE-rhc"/>
-                                    <constraint firstAttribute="trailing" secondItem="EyA-Lo-eqm" secondAttribute="trailing" constant="16" id="gbw-Kd-sE4"/>
-                                    <constraint firstAttribute="bottom" secondItem="EyA-Lo-eqm" secondAttribute="bottom" constant="26" id="geM-9u-aXf"/>
+                                    <constraint firstAttribute="trailing" secondItem="EyA-Lo-eqm" secondAttribute="trailing" constant="26" id="gbw-Kd-sE4"/>
+                                    <constraint firstAttribute="bottom" secondItem="EyA-Lo-eqm" secondAttribute="bottom" constant="39" id="geM-9u-aXf"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="centerY" secondItem="qWy-gx-5NL" secondAttribute="centerY" id="kJs-9G-NBE"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="height" secondItem="qWy-gx-5NL" secondAttribute="height" id="sL4-N8-lWm"/>
                                     <constraint firstItem="oef-Bs-OKK" firstAttribute="width" secondItem="qWy-gx-5NL" secondAttribute="width" id="y4O-fH-0mx"/>
@@ -580,7 +580,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU3-ui-zXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zBC-HK-egR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2609.5" y="386.5"/>
+            <point key="canvasLocation" x="2500.5" y="386.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qnx-0Q-I3X">
@@ -616,6 +616,6 @@
         <image name="imagePrize" width="640" height="1009"/>
         <image name="join" width="52" height="38"/>
         <image name="notification" width="28" height="22"/>
-        <image name="vote-inactive" width="38" height="49"/>
+        <image name="vote-inactive" width="53" height="80"/>
     </resources>
 </document>

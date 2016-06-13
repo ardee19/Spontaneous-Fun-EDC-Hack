@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes =
             [NSForegroundColorAttributeName:UIColor(red: 239.0/255.0, green: 8.0/255.0, blue: 255.0/255.0, alpha: 1.0), NSFontAttributeName:FontPalette.AVENIR_NEXT_HEAVY_16]
         UIBarButtonItem.appearance().setTitleTextAttributes(
-            [NSForegroundColorAttributeName:UIColor(red: 239.0/255.0, green: 8.0/255.0, blue: 255.0/255.0, alpha: 1.0), NSFontAttributeName:FontPalette.AVENIR_NEXT_HEAVY_16],
+            [NSForegroundColorAttributeName:UIColor(red: 239.0/255.0, green: 8.0/255.0, blue: 255.0/255.0, alpha: 1.0), NSFontAttributeName:FontPalette.AVENIR_NEXT_MEDIUM_16],
             forState: .Normal
         )
         // Navigation title vertical offset

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }
     let contestData:[Contest] = [
         Contest(title: "Ugliest Shuffle", artist: "Dada Life ⋆ Champagne Shower", votes: 59, thumbnail: UIImage(named:"dada-life")!, countdown: "4:00:00"),
-        Contest(title: "Amazing Lights", artist: "Kaskade ⋆ Signed Hat", votes: 37, thumbnail: UIImage(named:"kaskade")!, countdown: "5:00:10"),
+        Contest(title: "Air DJ Battle", artist: "Kaskade ⋆ Signed Hat", votes: 37, thumbnail: UIImage(named:"kaskade")!, countdown: "5:00:10"),
         Contest(title: "Emotional Totems", artist: "Flux Favillion ⋆ Launch the Bass Cannon", votes: 21, thumbnail: UIImage(named:"flux")!, countdown: "6:00:30"),
         Contest(title: "Illest Festival Flag", artist: "The Chainsmokers ⋆ Backstage Passes", votes: 133, thumbnail: UIImage(named:"chainsmokers")!, countdown: "6:30:30"),
         Contest(title: "Plurest Fam", artist: "Martin Garrix ⋆ VIP Experience", votes: 297, thumbnail: UIImage(named:"martin-garrix")!, countdown: "6:40:30"),
@@ -35,12 +35,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+                
         tableViewContest.delegate = self
         tableViewContest.dataSource = self
-        tableViewContest.rowHeight = 60
-        tableViewContest.estimatedRowHeight = 160.0
+        
+        // N-01 Table Separator
+        tableViewContest.separatorColor = Palette.OUTLINE
+        
+        // Set automatic table row height
+        tableViewContest.estimatedRowHeight = 78.0;
+        tableViewContest.rowHeight = UITableViewAutomaticDimension;
+        
+        // Remove extra separator
+        tableViewContest.tableFooterView = UIView()
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -56,11 +64,11 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView {
-        let view: UIView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 18))
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view: UIView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 20))
         /* Create custom view to display section header... */
-        let label: UILabel = UILabel(frame: CGRectMake(10, 5, tableView.frame.size.width, 18))
-        label.font = UIFont(name: "AvenirNext-Heavy", size: 11)
+        let label: UILabel = UILabel(frame: CGRectMake(10, 5, tableView.frame.size.width, 20))
+        label.font = UIFont(name: "AvenirNext-Heavy", size: 13)
         label.textColor = UIColor(red: 233/255.0, green: 6/255.0, blue: 250/255.0, alpha: 1.0)
 
 //        label.font = UIFont.boldSystemFontOfSize(12)
@@ -68,11 +76,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         var string: String
         
         if section == 0 {
-            string = "OFFICIAL CONTEST"
+            string = "OFFICIAL CONTESTS"
         } else if section == 1 {
-            string = "LIVE CONTEST"
+            string = "LIVE CONTESTS"
         } else {
-            string = "PAST CONTEST"
+            string = "PAST CONTESTS"
         }
         
         /* Section header is in 0th index... */

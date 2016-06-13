@@ -507,7 +507,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-MQ-Ems">
                                         <rect key="frame" x="0.0" y="0.0" width="383" height="397"/>
-                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.85098039215686272" green="0.85490196078431369" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -580,7 +580,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU3-ui-zXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zBC-HK-egR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2500.5" y="386.5"/>
+            <point key="canvasLocation" x="2440.5" y="386.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qnx-0Q-I3X">

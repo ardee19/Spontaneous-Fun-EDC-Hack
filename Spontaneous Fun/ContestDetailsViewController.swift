@@ -46,7 +46,7 @@ class ContestDetailsViewController: UIViewController {
         print("currentContestantIndex: \(currentContestantIndex)")
     }
 
-    var totalScrollwidth = 376 {
+    var totalScrollwidth = 380 {
         didSet {
             self.scrollview.contentSize = CGSizeMake(CGFloat(totalScrollwidth), 60)
         }

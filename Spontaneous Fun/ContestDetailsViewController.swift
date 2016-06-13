@@ -57,7 +57,7 @@ class ContestDetailsViewController: UIViewController {
 
     
     
-    public var contestants = [
+    internal var contestants = [
         Contestant(avatar: UIImage(named:"avatar-1")!, video: nil, imageSubmission: UIImage(named:"imageDanceRaw"), score: 10),
         Contestant(avatar: UIImage(named:"avatar-2")!, video: nil, imageSubmission: UIImage(named:"imageGroupRaw"), score: 20),
         Contestant(avatar: UIImage(named:"avatar-3")!, video: nil, imageSubmission: UIImage(named:"totem-3"), score: 30),

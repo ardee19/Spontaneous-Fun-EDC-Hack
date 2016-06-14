@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // set Selected Cell background Color
         let colorView = UIView()
-        colorView.backgroundColor = Palette.SECONDARY_BACKGROUND
+        colorView.backgroundColor = Palette.TINT_COLOR
         UITableViewCell.appearance().selectedBackgroundView = colorView
         
         // Navigation Bar Style

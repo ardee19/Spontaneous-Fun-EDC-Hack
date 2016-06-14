@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         
         // Remove extra separator
         tableViewContest.tableFooterView = UIView()
+        
 
     }
     
@@ -152,6 +153,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // Deselect Highlighted Cell
+        tableViewContest.deselectRowAtIndexPath(indexPath, animated: false)
+        
         
         if indexPath.section == 0 {
             selectedContest = contestData[indexPath.row]

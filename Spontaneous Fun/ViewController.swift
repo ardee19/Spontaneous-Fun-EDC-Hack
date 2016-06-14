@@ -35,9 +35,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         tableViewContest.delegate = self
         tableViewContest.dataSource = self
+        
+        // Header Height
+        tableViewContest.sectionHeaderHeight = 42
         
         // N-01 Table Separator
         tableViewContest.separatorColor = Palette.OUTLINE
@@ -49,7 +52,6 @@ class ViewController: UIViewController {
         // Remove extra separator
         tableViewContest.tableFooterView = UIView()
         
-
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -66,16 +68,15 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let view: UIView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 20))
         /* Create custom view to display section header... */
-        let label: UILabel = UILabel(frame: CGRectMake(10, 5, tableView.frame.size.width, 20))
+        let label: UILabel = UILabel(frame: CGRectMake(10, 14, tableView.frame.size.width, 20))
         label.font = UIFont(name: "AvenirNext-Heavy", size: 13)
         label.textColor = UIColor(red: 233/255.0, green: 6/255.0, blue: 250/255.0, alpha: 1.0)
 
-//        label.font = UIFont.boldSystemFontOfSize(12)
         
         var string: String
-        
         if section == 0 {
             string = "OFFICIAL CONTESTS"
         } else if section == 1 {
@@ -90,6 +91,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         view.addSubview(label)
         view.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         //your background color...
+        
         return view
     }
     

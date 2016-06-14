@@ -396,17 +396,17 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePrize" translatesAutoresizingMaskIntoConstraints="NO" id="xQ2-7n-N3D">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="603"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geo-filer" translatesAutoresizingMaskIntoConstraints="NO" id="fsK-iR-xVB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.91372549020000005" green="0.023529411760000001" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="RGu-ap-K75" firstAttribute="top" secondItem="xQ2-7n-N3D" secondAttribute="bottom" id="Fg8-yt-ZRT"/>
-                            <constraint firstItem="xQ2-7n-N3D" firstAttribute="top" secondItem="hac-Gh-yWG" secondAttribute="bottom" id="Fxg-nm-dug"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xQ2-7n-N3D" secondAttribute="trailing" constant="-20" id="cZu-ch-GW4"/>
-                            <constraint firstItem="xQ2-7n-N3D" firstAttribute="leading" secondItem="gsA-26-h7C" secondAttribute="leadingMargin" constant="-20" id="fXH-oy-iHk"/>
+                            <constraint firstItem="fsK-iR-xVB" firstAttribute="leading" secondItem="gsA-26-h7C" secondAttribute="leading" id="7bS-eH-ugV"/>
+                            <constraint firstAttribute="trailing" secondItem="fsK-iR-xVB" secondAttribute="trailing" id="Isa-9z-1yl"/>
+                            <constraint firstItem="fsK-iR-xVB" firstAttribute="top" secondItem="hac-Gh-yWG" secondAttribute="bottom" id="L2n-Nq-m0F"/>
+                            <constraint firstItem="RGu-ap-K75" firstAttribute="top" secondItem="fsK-iR-xVB" secondAttribute="bottom" id="bVW-hW-Vsi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="NOTIFICATION" id="PP8-ge-xnb"/>
@@ -612,8 +612,8 @@
         <image name="cameraButton" width="138" height="138"/>
         <image name="chainsmokers" width="156" height="156"/>
         <image name="contestants-icon-sm" width="10" height="9"/>
+        <image name="geo-filer" width="1242" height="1999"/>
         <image name="imageDance" width="640" height="640"/>
-        <image name="imagePrize" width="640" height="1009"/>
         <image name="join" width="52" height="38"/>
         <image name="notification" width="28" height="22"/>
         <image name="vote-inactive" width="53" height="80"/>

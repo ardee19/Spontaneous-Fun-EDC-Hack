@@ -18,19 +18,19 @@ class ViewController: UIViewController {
         JLToast.makeText("Yeah Fam").show()
     }
     let contestData:[Contest] = [
-        Contest(title: "Ugliest Shuffle", artist: "Dada Life ⋆ Champagne Shower", votes: 59, thumbnail: UIImage(named:"dada-life")!, countdown: "4:00:00"),
-        Contest(title: "Air DJ Battle", artist: "Kaskade ⋆ Signed Hat", votes: 37, thumbnail: UIImage(named:"kaskade")!, countdown: "5:00:10"),
-        Contest(title: "Emotional Totems", artist: "Flux Favillion ⋆ Launch the Bass Cannon", votes: 21, thumbnail: UIImage(named:"flux")!, countdown: "6:00:30"),
-        Contest(title: "Illest Festival Flag", artist: "The Chainsmokers ⋆ Backstage Passes", votes: 133, thumbnail: UIImage(named:"chainsmokers")!, countdown: "6:30:30"),
-        Contest(title: "Plurest Fam", artist: "Martin Garrix ⋆ VIP Experience", votes: 297, thumbnail: UIImage(named:"martin-garrix")!, countdown: "6:40:30"),
+        Contest(title: "Ugliest Banana", artist: "Dada Life · Champagne Shower", votes: 59, thumbnail: UIImage(named:"dada-life")!, countdown: "4:00:00"),
+        Contest(title: "Air DJ Battle", artist: "Kaskade · Signed Hat", votes: 37, thumbnail: UIImage(named:"kaskade")!, countdown: "5:00:10"),
+        Contest(title: "Emotional Totems", artist: "Flux Favillion · Launch the Bass Cannon", votes: 21, thumbnail: UIImage(named:"flux")!, countdown: "6:00:30"),
+        Contest(title: "Lit Festival Flags", artist: "The Chainsmokers · Backstage Passes", votes: 133, thumbnail: UIImage(named:"chainsmokers")!, countdown: "6:30:30"),
+        Contest(title: "Plurest Fam Photo", artist: "Martin Garrix · VIP Experience", votes: 297, thumbnail: UIImage(named:"martin-garrix")!, countdown: "6:40:30"),
     ]
     
     let userContestData:[Contest] = [
-        Contest(title: "Ugliest Shuffle", artist: "Dada Life ⋆ Champagne Shower", votes: 59, thumbnail: UIImage(named:"avatar-12")!, countdown: "4:00:00"),
-        Contest(title: "Amazing Lights", artist: "Kaskade ⋆ Signed Hat", votes: 37, thumbnail: UIImage(named:"avatar-11")!, countdown: "5:00:10"),
-        Contest(title: "Emotional Totems", artist: "Flux Favillion ⋆ Launch the Bass Cannon", votes: 21, thumbnail: UIImage(named:"avatar-10")!, countdown: "6:00:30"),
-        Contest(title: "Illest Festival Flag", artist: "The Chainsmokers ⋆ Backstage Passes", votes: 133, thumbnail: UIImage(named:"avatar-9")!, countdown: "6:30:30"),
-        Contest(title: "Plurest Fam", artist: "Martin Garrix ⋆ VIP Experience", votes: 297, thumbnail: UIImage(named:"avatar-8")!, countdown: "6:40:30"),
+        Contest(title: "Popping it Deep down low", artist: "Chasity", votes: 21, thumbnail: UIImage(named:"avatar-12")!, countdown: ""),
+        Contest(title: "Under the Electric Sky", artist: "Alchemy", votes: 84, thumbnail: UIImage(named:"avatar-11")!, countdown: ""),
+        Contest(title: "Ayyyyy", artist: "Rave Unicorn", votes: 5, thumbnail: UIImage(named:"avatar-10")!, countdown: ""),
+        Contest(title: "Hardcore raving", artist: "Cinnamon", votes: 133, thumbnail: UIImage(named:"avatar-9")!, countdown: ""),
+        Contest(title: "Epic Moves", artist: "Kirsten", votes: 297, thumbnail: UIImage(named:"avatar-8")!, countdown: ""),
         ]
     
     override func viewDidLoad() {
@@ -137,11 +137,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             cell.votes.text = "\(userContestData[indexPath.row].votes)"
             cell.countdown.text = userContestData[indexPath.row].countdown
         } else {
-            cell.title.text = contestData[indexPath.row].title
-            cell.artist.text = contestData[indexPath.row].artist
-            cell.thumbnail.image = contestData[indexPath.row].thumbnail
-            cell.votes.text = "\(contestData[indexPath.row].votes)"
-            cell.countdown.text = contestData[indexPath.row].countdown
+            cell.title.text = userContestData[indexPath.row].title
+            cell.artist.text = userContestData[indexPath.row].artist
+            cell.thumbnail.image = userContestData[indexPath.row].thumbnail
+            cell.votes.text = "\(userContestData[indexPath.row].votes)"
+            cell.countdown.text = userContestData[indexPath.row].countdown
         }
         
         //Make the thumbnail round

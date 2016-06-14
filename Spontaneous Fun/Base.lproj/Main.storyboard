@@ -396,7 +396,7 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geo-filer" translatesAutoresizingMaskIntoConstraints="NO" id="fsK-iR-xVB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geo-filter" translatesAutoresizingMaskIntoConstraints="NO" id="fsK-iR-xVB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </imageView>
                         </subviews>
@@ -612,7 +612,7 @@
         <image name="cameraButton" width="138" height="138"/>
         <image name="chainsmokers" width="156" height="156"/>
         <image name="contestants-icon-sm" width="10" height="9"/>
-        <image name="geo-filer" width="1242" height="1999"/>
+        <image name="geo-filter" width="1242" height="1999"/>
         <image name="imageDance" width="640" height="640"/>
         <image name="join" width="52" height="38"/>
         <image name="notification" width="28" height="22"/>

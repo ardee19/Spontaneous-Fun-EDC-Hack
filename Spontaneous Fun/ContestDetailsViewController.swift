@@ -43,6 +43,7 @@ class ContestDetailsViewController: UIViewController {
     func selectContestant(contestant:Contestant, index:Int) {
         self.selectedContestant = contestant
         self.currentContestantIndex = index
+        setAvatar(currentContestantIndex)
         print("currentContestantIndex: \(currentContestantIndex)")
     }
 
@@ -69,7 +70,7 @@ class ContestDetailsViewController: UIViewController {
         ] {
         didSet{
             totalScrollwidth = contestants.count * 47
-            setAvatar()
+            setAvatar(currentContestantIndex)
         }
     }
     
@@ -92,10 +93,10 @@ class ContestDetailsViewController: UIViewController {
         
         imageDance.image = contestants[0].imageSubmission
         
-        setAvatar()
+        setAvatar(currentContestantIndex)
     }
     
-    func setAvatar() {
+    func setAvatar(activeAvatar:Int) {
         for subview: UIView in self.scrollview.subviews {
             subview.removeFromSuperview()
         }
@@ -110,6 +111,12 @@ class ContestDetailsViewController: UIViewController {
             //Make the avatar look round
             imageView.layer.cornerRadius = imageView.frame.width / 2
             imageView.layer.masksToBounds = true
+            
+            if activeAvatar == (i - 1) {
+                print("activeAvatar: \(activeAvatar) - currentContestantIndex: \(currentContestantIndex) - i: \(i), (i - 1): \(i - 1)")
+                imageView.layer.borderColor = UIColor.greenColor().CGColor
+                imageView.layer.borderWidth = 2
+            }
             
             view.addSubview(imageView)
             
@@ -149,14 +156,14 @@ class ContestDetailsViewController: UIViewController {
             contestants[currentContestantIndex].score += 1
             contestants[currentContestantIndex].voted = true
             sender.setImage(upVotedImage, forState: .Normal)
-            setAvatar()
+            setAvatar(currentContestantIndex)
             
 //            votedFlag = true
         } else {
             contestants[currentContestantIndex].score -= 1
             contestants[currentContestantIndex].voted = false
             sender.setImage(noVoteImage, forState: .Normal)
-            setAvatar()
+            setAvatar(currentContestantIndex)
             print("You already voted")
         }
     }

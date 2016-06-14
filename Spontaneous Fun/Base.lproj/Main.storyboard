@@ -415,6 +415,44 @@
             </objects>
             <point key="canvasLocation" x="1882.5" y="-402.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="vkG-Sj-UWu">
+            <objects>
+                <viewController id="rdS-1H-I08" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f61-pD-qpo"/>
+                        <viewControllerLayoutGuide type="bottom" id="dYY-FI-uB2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JGa-Kq-jWa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social" translatesAutoresizingMaskIntoConstraints="NO" id="5qe-eS-gil">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5qe-eS-gil" firstAttribute="top" secondItem="JGa-Kq-jWa" secondAttribute="topMargin" id="6Dc-FD-WlC"/>
+                            <constraint firstAttribute="trailing" secondItem="5qe-eS-gil" secondAttribute="trailing" id="ADV-Hd-QdQ"/>
+                            <constraint firstItem="5qe-eS-gil" firstAttribute="leading" secondItem="JGa-Kq-jWa" secondAttribute="leading" id="QgM-0c-WFp"/>
+                            <constraint firstItem="dYY-FI-uB2" firstAttribute="top" secondItem="5qe-eS-gil" secondAttribute="bottom" id="cVh-VG-L7A"/>
+                            <constraint firstItem="5qe-eS-gil" firstAttribute="top" secondItem="f61-pD-qpo" secondAttribute="bottom" id="jSV-P7-9Za"/>
+                            <constraint firstItem="5qe-eS-gil" firstAttribute="bottom" secondItem="JGa-Kq-jWa" secondAttribute="bottomMargin" id="zRO-ZN-i1k"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jSV-P7-9Za"/>
+                                <exclude reference="cVh-VG-L7A"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ygp-2P-HdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2440.5" y="1241.5"/>
+        </scene>
         <!--JOIN-->
         <scene sceneID="wGe-Th-Z68">
             <objects>
@@ -616,6 +654,7 @@
         <image name="imageDance" width="640" height="640"/>
         <image name="join" width="52" height="38"/>
         <image name="notification" width="28" height="22"/>
+        <image name="social" width="750" height="1334"/>
         <image name="vote-inactive" width="53" height="80"/>
     </resources>
 </document>

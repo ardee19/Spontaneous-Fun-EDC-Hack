@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eAx-Tw-Fsp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eAx-Tw-Fsp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -368,7 +368,18 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="CONTEST" id="IZy-av-ybJ"/>
+                    <navigationItem key="navigationItem" title="CONTEST" id="IZy-av-ybJ">
+                        <barButtonItem key="rightBarButtonItem" image="share-lg" style="plain" id="Amt-Cf-1Rh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ftm-YM-CuS">
+                                <rect key="frame" x="323" y="4" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="share-lg"/>
+                                <connections>
+                                    <segue destination="rdS-1H-I08" kind="presentation" id="JtG-aF-r9A"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="artist" destination="jZd-aY-8Ji" id="eO4-Vf-fsS"/>
                         <outlet property="contestTitle" destination="SeG-l8-sEn" id="Lqd-dI-UvU"/>
@@ -430,6 +441,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="social" translatesAutoresizingMaskIntoConstraints="NO" id="5qe-eS-gil">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI8-TX-5gz">
+                                <rect key="frame" x="0.0" y="0.0" width="124" height="52"/>
+                                <connections>
+                                    <segue destination="WJt-Oj-t4k" kind="unwind" unwindAction="unWindToContestDetails:" id="XBj-yD-MgM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -450,8 +467,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ygp-2P-HdD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="WJt-Oj-t4k" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2440.5" y="1241.5"/>
+            <point key="canvasLocation" x="1882.5" y="1239.5"/>
         </scene>
         <!--JOIN-->
         <scene sceneID="wGe-Th-Z68">
@@ -654,6 +672,7 @@
         <image name="imageDance" width="640" height="640"/>
         <image name="join" width="52" height="38"/>
         <image name="notification" width="28" height="22"/>
+        <image name="share-lg" width="36" height="36"/>
         <image name="social" width="750" height="1334"/>
         <image name="vote-inactive" width="53" height="80"/>
     </resources>

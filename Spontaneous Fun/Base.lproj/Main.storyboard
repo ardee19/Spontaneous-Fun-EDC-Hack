@@ -373,11 +373,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="CONTEST" id="IZy-av-ybJ">
-                        <barButtonItem key="rightBarButtonItem" image="share-lg" style="plain" id="Amt-Cf-1Rh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="Amt-Cf-1Rh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ftm-YM-CuS">
                                 <rect key="frame" x="323" y="4" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="share-lg"/>
+                                <state key="normal" image="share"/>
                                 <connections>
                                     <segue destination="rdS-1H-I08" kind="presentation" id="JtG-aF-r9A"/>
                                 </connections>
@@ -677,7 +677,7 @@
         <image name="imageDance" width="640" height="640"/>
         <image name="join" width="52" height="38"/>
         <image name="notification" width="28" height="22"/>
-        <image name="share-lg" width="36" height="36"/>
+        <image name="share" width="17" height="19"/>
         <image name="social" width="750" height="1334"/>
         <image name="vote-inactive" width="53" height="80"/>
     </resources>

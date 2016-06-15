@@ -22,6 +22,37 @@ class ContestDetailsViewController: UIViewController {
     
     @IBOutlet weak var imageDance: UIImageView!
     
+    func respondToSwipe(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                print("Right")
+                
+                if currentContestantIndex > 0 {
+                print("currentContestantIndex Before: \(currentContestantIndex)")
+                currentContestantIndex -= 1
+                    selectContestant(contestants[currentContestantIndex], index: currentContestantIndex)
+                print("currentContestantIndex After: \(currentContestantIndex)")
+                }
+//                selectContestant(<#T##Contestant#>, index: <#T##Int#>)
+            case UISwipeGestureRecognizerDirection.Left:
+                print("Left")
+                if currentContestantIndex < contestants.count - 1 {
+                print("currentContestantIndex Before: \(currentContestantIndex)")
+                currentContestantIndex += 1
+                selectContestant(contestants[currentContestantIndex], index: currentContestantIndex)
+                print("currentContestantIndex After: \(currentContestantIndex)")
+                }
+            case UISwipeGestureRecognizerDirection.Up:
+                print("Up")
+            case UISwipeGestureRecognizerDirection.Down:
+                print("Down")
+            default:
+                break
+            }
+        }
+    }
+    
     var selectedContestant = Contestant() {
         didSet {
             if let image = selectedContestant.imageSubmission {
@@ -94,6 +125,14 @@ class ContestDetailsViewController: UIViewController {
         imageDance.image = contestants[0].imageSubmission
         
         setAvatar(currentContestantIndex)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(ContestDetailsViewController.respondToSwipe(_:)))
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
+        view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ContestDetailsViewController.respondToSwipe(_:)))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        view.addGestureRecognizer(swipeLeft)
     }
     
     func setAvatar(activeAvatar:Int) {
@@ -168,6 +207,10 @@ class ContestDetailsViewController: UIViewController {
         }
     }
 
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -177,6 +220,9 @@ class ContestDetailsViewController: UIViewController {
         self.performSegueWithIdentifier(Segue.joinContest, sender: nil)
     }
 
+    
+    
+    
     
     
     // MARK: - Navigation

@@ -295,6 +295,10 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageDance" translatesAutoresizingMaskIntoConstraints="NO" id="oef-Bs-OKK">
                                         <rect key="frame" x="0.0" y="0.0" width="383" height="398"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="1Uy-hQ-nWX" appends="YES" id="zpJ-68-RAz"/>
+                                        </connections>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDD-ki-Gny">
                                         <rect key="frame" x="6" y="4" width="377" height="60"/>
@@ -392,6 +396,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANf-ts-5Fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="1Uy-hQ-nWX"/>
             </objects>
             <point key="canvasLocation" x="1883" y="387"/>
         </scene>
